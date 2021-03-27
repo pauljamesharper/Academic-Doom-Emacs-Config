@@ -1,6 +1,6 @@
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
-(setq user-full-name "Sunny Hasija"
-      user-mail-address "hasija.4@osu.edu")
+(setq user-full-name "Paul Harper"
+      user-mail-address "harper.paul.j@gmail.com")
 
 (setq-default
  delete-by-moving-to-trash t                      ; Delete files to trash
@@ -97,7 +97,7 @@
 ;(setq doom-theme 'zaiste)
 ;(setq doom-theme 'doom-flatwhite)
 ;;dark themes
-(setq doom-theme 'doom-palenight)
+(setq doom-theme 'doom-zenburn)
 
 (setq display-line-numbers-type t)
 
@@ -108,7 +108,7 @@
    (buffer-face-mode))
  (add-hook 'org-mode-hook 'my-buffer-face-mode-variable)
 
-(setq org-directory "~/Dropbox/Org/")
+(setq org-directory "~/Dropbox/org/")
 
 (use-package! org-ref
     :after org
@@ -117,9 +117,9 @@
     :config
     ; code to run after loading org-ref
     )
-(setq org-ref-notes-directory "~/Dropbox/Org/references/notes"
-     ; org-ref-bibliography-notes "~/Dropbox/Org/references/articles.org" ;; not needed anymore. Notes now taken in org-roaM
-      org-ref-default-bibliography '("~/Dropbox/Org/references/library.bib")
+(setq org-ref-notes-directory "~/Dropbox/org/references/notes"
+     ; org-ref-bibliography-notes "~/Dropbox/org/references/articles.org" ;; not needed anymore. Notes now taken in org-roaM
+      org-ref-default-bibliography '("~/Dropbox/org/references/library.bib")
       org-ref-pdf-directory "~/Dropbox/Zotero/")
 
 (after! org
@@ -127,7 +127,7 @@
                '(("a"               ; key
                   "Article"         ; name
                   entry             ; type
-                  (file+headline "~/Dropbox/Org/phd.org" "Article")  ; target
+                  (file+headline "~/Dropbox/org/phd.org" "Article")  ; target
                   "\* %^{Title} %(org-set-tags)  :article: \n:PROPERTIES:\n:Created: %U\n:Linked: %a\n:END:\n%i\nBrief description:\n%?"  ; template
                   
                   :prepend t        ; properties
@@ -151,9 +151,9 @@
 (setq
       bibtex-completion-pdf-field "file"
       bibtex-completion-bibliography
-      '("~/Dropbox/Org/references/library.bib")
+      '("~/Dropbox/org/references/library.bib")
       bibtex-completion-library-path '("~/Dropbox/Zotero/")
-     ; bibtex-completion-notes-path "~/Dropbox/Org/references/articles.org"  ;; not needed anymore as I take notes in org-roam
+     ; bibtex-completion-notes-path "~/Dropbox/org/references/articles.org"  ;; not needed anymore as I take notes in org-roam
       )
 
 (use-package! zotxt
@@ -173,7 +173,7 @@
 (setq org-pandoc-format-extensions '(markdown_github+pipe_tables+raw_html))
 
 (use-package! org-roam-bibtex
-  :load-path "~/Dropbox/Org/references/library.bib" ;Modify with your own path
+  :load-path "~/Dropbox/org/references/library.bib" ;Modify with your own path
   :hook (org-roam-mode . org-roam-bibtex-mode)
   :bind (:map org-mode-map
          (("C-c n a" . orb-note-actions))))
@@ -202,7 +202,7 @@
 :END:")))
 
 ; org-roam settings
-(setq org-roam-directory "~/Dropbox/Org/references/notes")
+(setq org-roam-directory "~/Dropbox/org/references/notes")
 (after! org-roam
         (map! :leader
             :prefix "n"
@@ -226,7 +226,7 @@
 ;; org-journal the DOOM way
 (use-package org-journal
   :init
-  (setq org-journal-dir "~/Dropbox/Org/Daily/"
+  (setq org-journal-dir "~/Dropbox/org/Daily/"
         org-journal-date-prefix "#+TITLE: "
         org-journal-file-format "%Y-%m-%d.org"
         org-journal-date-format "%A, %d %B %Y")
@@ -246,7 +246,7 @@
       (deft-recursive t)
       (deft-use-filter-string-for-filename t)
       (deft-default-extension "org")
-      (deft-directory "~/Dropbox/Org/references/notes/"))
+      (deft-directory "~/Dropbox/org/references/notes/"))
 
 (use-package! org-roam-server
   :after org-roam
@@ -302,7 +302,7 @@
       org-agenda-block-separator nil
       org-agenda-tags-column 100 ;; from testing this seems to be a good value
       org-agenda-compact-blocks t)
-(setq org-agenda-files "~/Dropbox/Org/Daily/")
+(setq org-agenda-files "~/Dropbox/org/Daily/")
 (setq org-agenda-custom-commands
       '(("o" "Overview"
          ((agenda "" ((org-agenda-span 'day)
@@ -373,7 +373,7 @@
  ;; If there is more than one, they won't work right.
  '(org-journal-date-format "%A, %d %B %Y" t)
  '(org-journal-date-prefix "#+TITLE: " t)
- '(org-journal-dir "~/Dropbox/Org/Daily/" t)
+ '(org-journal-dir "~/Dropbox/org/Daily/" t)
  '(org-journal-file-format "%Y-%m-%d.org" t)
  '(package-selected-packages (quote (org-fancy-priorities))))
 (custom-set-faces
