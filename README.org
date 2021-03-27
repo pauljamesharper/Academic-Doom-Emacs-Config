@@ -3,7 +3,7 @@
 
 * About This Config
 
-This config has evolved over the last few months to reflect my needs as an academic. I initially started with emacs to take notes on papers. I eventually discovered Org-Roam and its supporting packages `org-roam-bibtex` and `org-roam-server`. I hope this config can be useful to other academics who are starting out with DOOM emacs and want to replicate my workflow or are looking to incorporate some of the packages I use into their own configs. The config has since then grown to include `org-super-agenda` and `org-journal` which are two of the packages that I use to keep on track with my commitments and tasks.
+Forked from sunnyhasija/Academic-Doom-Emacs-Config This config has evolved over the last few months to reflect my needs as an academic. I initially started with emacs to take notes on papers. I eventually discovered Org-Roam and its supporting packages `org-roam-bibtex` and `org-roam-server`. I hope this config can be useful to other academics who are starting out with DOOM emacs and want to replicate my workflow or are looking to incorporate some of the packages I use into their own configs. The config has since then grown to include `org-super-agenda` and `org-journal` which are two of the packages that I use to keep on track with my commitments and tasks.
 
 ** Move to GCC emacs
 One of the things that irritated me the most about emacs was how slow it was when the text in one of the files got very long. If a line (paragraphs are considered one line in emacs) gets too long, emacs starts to slow down till you start a new paragraph. As someone who does writing for a living, taking notes, inserting citations, this starts to get very annoying. Upon conversation with the creator of DOOM emacs, I installed GCC emacs. There are a bunch of different ways to do this, but I followed the amazing gist written by [[https://gist.github.com/mjlbach/179cf58e1b6f5afcb9a99d4aaf54f549][mjlbach]]. When I ran into trouble he took time out to help me figure it out. Much thanks to him. As a result, my emacs runs as fast as it ever has.
@@ -19,8 +19,8 @@ This section of the config takes care of some of the housekeeping, and default b
 ** Name and Email
 #+BEGIN_SRC elisp
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
-(setq user-full-name "Sunny Hasija"
-      user-mail-address "hasija.4@osu.edu")
+(setq user-full-name "Paul Harper"
+      user-mail-address "harper.paul.j@gmail.com")
 #+END_SRC
 ** Rudimentary Settings
 
